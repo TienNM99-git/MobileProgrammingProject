@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.DeviceDetailsActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarDeviceDetails"
+        android:background="#31C547"
+        app:title="Device details"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:scaleType="fitXY"
+            android:id="@+id/imgvDeviceDetails"
+            android:src="@mipmap/ic_launcher"
+            android:layout_margin="10dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+        <LinearLayout
+            android:weightSum="5"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtdetailsName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Device's name"
+                    android:textColor="#f000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+
+                    android:textSize="20sp"
+                    android:id="@+id/txtdetailsPrice"
+                    android:layout_marginLeft="5dp"
+                    android:text="Price"
+                    android:textColor="#E91E63"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="2"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Spinner
+                    android:layout_marginLeft="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/spinner"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/detailsSpinner"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent">
+                </Spinner>
+                <Button
+                    android:id="@+id/btnBuy"
+                    android:textColor="#352700"
+                    android:textSize="15sp"
+                    android:text="Add to cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textColor="#34B47C"
+            android:layout_marginTop="5dp"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:text="Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:paddingBottom="10dp"
+                android:id="@+id/txtdetailsDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextColor="#009688"
+        app:title="Contact Information"
+        android:id="@+id/toolbarContact">
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/contacttheme">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="#B0273C"
+            android:text="Contact us"
+            android:layout_margin="10dp"/>
+        <LinearLayout
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <TextView
+                android:drawableLeft="@drawable/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:gravity="left"
+                android:textColor="#1D1512"
+                android:textAlignment="center"
+                android:text="Address : 1th Vo Van Ngan, Thu Duc District, Ho Chi Minh City"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30dp"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:map="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".Activity.Contact" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.LaptopActivity"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:titleTextColor="#F44336"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#BEB2B2"
+        android:title="Laptop"
+        android:id="@+id/toolbarLaptop">
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listviewLaptop">
+        </ListView>
+    </LinearLayout>
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        app:fab_addButtonColorNormal="@color/colorAccent"
+        app:fab_addButtonColorPressed="#AA120E0E"
+        app:fab_labelStyle="@style/custom_fab">
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabDevice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorAccent"
+            app:fab_colorPressed="#AA120E0E"
+            app:fab_icon="@drawable/ic_device"
+            app:fab_size="mini"
+            app:fab_title="Add Device" />
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorAccent"
+            app:fab_colorPressed="#AA120E0E"
+            app:fab_icon="@drawable/ic_home"
+            app:fab_size="mini"
+            app:fab_title="Home Page" />
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</LinearLayout>
